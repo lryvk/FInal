@@ -32,14 +32,12 @@ function drawCircle(x, y, radius, color) {
     }
 }
 function draw() {
-    // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw paddles
-    drawRect(0, player1Y, paddleWidth, paddleHeight, "white");
-    drawRect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight, "white");
+    drawRect(0, player1Y, paddleWidth, paddleHeight, "green");
+    drawRect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight, "red");
 
-    // Draw ball
+    
     drawCircle(ballX, ballY, ballSize, "white");
 
     // Move ball
@@ -73,4 +71,4 @@ function mouseMove(event) {
 
 canvas.addEventListener("mousemove", mouseMove);
 
-setInterval(draw, 16.67); // ~60 frames per second
+setInterval(draw, 16.67); 
